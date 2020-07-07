@@ -4,6 +4,8 @@ A simple create react app + electron implementation to show [space-daemon](https
 
 ### Run the project:
 
+> You need to install and run [space-daemon](https://github.com/FleekHQ/space-daemon) to run this project
+
 Install project dependencies: 
 
 `npm install`
