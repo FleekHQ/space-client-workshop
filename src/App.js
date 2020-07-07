@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+import CreateBucket from './components/CreateBucket';
+import CreateFolder from './components/CreateFolder';
+import UploadFiles from './components/UploadFiles';
+import ListDirectory from './components/ListDirectory';
+import OpenFile from './components/OpenFile';
+import ShareBucket from './components/ShareBucket';
+import JoinBucket from './components/JoinBucket';
+
+const darkTheme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      <div className="App">
+        <CreateBucket />
+        <CreateFolder />
+        <ListDirectory />
+        <UploadFiles />
+        <OpenFile />
+        <ShareBucket />
+        <JoinBucket />
+      </div>
+    </ThemeProvider>
   );
 }
 
