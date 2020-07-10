@@ -1130,10 +1130,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.8.0.tgz#bbbff68978fefdbe68ccb533bc8cbe1d1afb5413"
   integrity sha512-kBJtf7PH6aWwZ6fka3zQ0p6SBYzx4fl1LoZXE2RrnYST9Xljm7WfKJrU4g/Xr3Beg72MLrp1AWNUmuYJTL7Cow==
 
-"@fleekhq/space-client@^0.1.3":
-  version "0.1.3"
-  resolved "https://registry.yarnpkg.com/@fleekhq/space-client/-/space-client-0.1.3.tgz#7a3767ba9cfa4227ddf6662cb731f338678b45a9"
-  integrity sha512-aPQOo8vXbiV62lgcyTkjzBIB2cgUhxYK/1Ru02GytEHf+mUMLlTrOqbp5kCAvYpuZSWzcvd5zcHXfBwr4ouc7g==
+"@fleekhq/space-client@^0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@fleekhq/space-client/-/space-client-0.1.4.tgz#bffe299cf7f3d85dfef531469d604001616f4fac"
+  integrity sha512-kp2Z1xT+sjufGgh/ABpumhjHfBGFPHxKV/GFaew1dOkm60T209uh+2tD4Mwom+QfcSi7s0IQq8dQZx4cZuhfpg==
   dependencies:
     "@types/google-protobuf" "^3.7.2"
     google-protobuf "^3.12.2"
