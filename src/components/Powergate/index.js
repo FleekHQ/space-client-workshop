@@ -7,9 +7,7 @@ import { createPow } from "@textile/powergate-client"
 import useStyles from './styles';
 import Card from '../Card';
 
-// https://docs.filecoin.io/build/start-building/interacting-with-the-network/#devnets
-
-const host = "http://0.0.0.0:6002" // GrpcWebProxyAddress
+const host = "http://0.0.0.0:6005" // port 6005 instead 0f 6002 for the space-daemon powergate
 
 const pow = createPow({ host })
 
@@ -27,6 +25,8 @@ const Powergate = (props) => {
       console.log('status..', status);
       const reader = new FileReader();
 
+      reader.readAsArrayBuffer(file);
+
       reader.onload = async () => {
         const arrayBuffer = reader.result;
         const buffer = new Buffer(arrayBuffer);
@@ -37,12 +37,12 @@ const Powergate = (props) => {
     
         // wallet management
         // get wallet addresses associated with your FFS instance
-        const { addrsList } = await pow.ffs.addrs();
-        console.log(addrsList);
-        const balance = await pow.wallet.balance(addrsList[0].addr);
-        console.log(balance);
+        // const { addrsList } = await pow.ffs.addrs();
+        // console.log(addrsList);
+        // const balance = await pow.wallet.balance(addrsList[0].addr);
 
         // create new address named myNewAddress
+        // this newly created address can be specified to be the one to use for file upload
         // const { addr } = await pow.ffs.newAddr("myNewAddress");
 
         // cache data in IPFS in preparation to store it using FFS
@@ -65,14 +65,13 @@ const Powergate = (props) => {
         const bytes = await pow.ffs.get(cid)
         console.log('retrieved file', bytes);
       }
-      reader.readAsArrayBuffer(file);
     } catch(e) {
       console.error(e);
     }
   };
 
   return (
-    <Card id="8" title="Powergate Status">
+    <Card id="8" title="Powergate">
       <form onSubmit={onSubmit} className={classes.root}>
         <input
           type="file"
@@ -84,7 +83,7 @@ const Powergate = (props) => {
           variant="contained"
           color="primary"
         >
-          Status
+          Upload File
         </Button>
       </form>
     </Card>
