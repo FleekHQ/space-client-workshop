@@ -9,6 +9,7 @@ import ListDirectory from './components/ListDirectory';
 import OpenFile from './components/OpenFile';
 import ShareBucket from './components/ShareBucket';
 import JoinBucket from './components/JoinBucket';
+import Powergate from './components/Powergate';
 
 const darkTheme = createMuiTheme({
   palette: {
@@ -27,6 +28,7 @@ function App() {
         <OpenFile />
         <ShareBucket />
         <JoinBucket />
+        <Powergate />
       </div>
     </ThemeProvider>
   );

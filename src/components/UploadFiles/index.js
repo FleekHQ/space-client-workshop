@@ -53,7 +53,7 @@ const UploadFiles = (props) => {
         />
 
         <TextField
-          label="Path"
+          label="File Path"
           variant="outlined"
           value={path}
           size="small"
@@ -63,7 +63,7 @@ const UploadFiles = (props) => {
         />
 
         <TextField
-          label="Target Path"
+          label="Bucket Path"
           variant="outlined"
           value={targetPath}
           size="small"
