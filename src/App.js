@@ -10,6 +10,7 @@ import OpenFile from './components/OpenFile';
 import ShareBucket from './components/ShareBucket';
 import JoinBucket from './components/JoinBucket';
 import Powergate from './components/Powergate';
+import GenerateKeyPair from './components/GenerateKeyPair';
 
 const darkTheme = createMuiTheme({
   palette: {
@@ -21,6 +22,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <div className="App">
+        <GenerateKeyPair />
         <CreateBucket />
         <CreateFolder />
         <ListDirectory />
